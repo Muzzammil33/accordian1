@@ -7,7 +7,6 @@ import {
   QueryList
 } from "@angular/core";
 import { AccordionItem } from "./directives/accordion-item.directive";
-import {memoize} from 'lodash'
 
 @Component({
   selector: "accordion",
@@ -39,10 +38,10 @@ export class AccordionComponent {
    * Memoize to prevent extra calls
    * @param index - index of the accordion item
    */
-  getToggleState = memoize((index: number) => {
-    console.log('Called');
-    return this.toggleState.bind(this, index);
-  })
+  // getToggleState = memoize((index: number) => {
+  //   console.log('Called');
+  //   return this.toggleState.bind(this, index);
+  // })
 
   toggleState = (index: number) => {
     if (this.expanded.has(index)) {
