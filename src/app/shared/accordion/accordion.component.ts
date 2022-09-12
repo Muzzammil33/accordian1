@@ -23,6 +23,8 @@ import { AccordionItem } from "./directives/accordion-item.directive";
   ]
 })
 export class AccordionComponent {
+
+
   expanded = new Set<number>();
   /**
    * Decides if the single item will be open at once or not.
@@ -30,7 +32,7 @@ export class AccordionComponent {
    */
   @Input() collapsing = true;
 
-  @ContentChildren(AccordionItem) items: QueryList<AccordionItem>;
+  @ContentChildren(AccordionItem) items!: QueryList<AccordionItem>;
 
   /**
    * Make the toggle function available to be called from

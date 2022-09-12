@@ -9,7 +9,7 @@ import { AccordionTitle } from "./accordion-title.directive";
 export class AccordionItem {
   @Input() title = "";
   @Input() disabled = false;
-  @ContentChild(AccordionContent) content: AccordionContent;
-  @ContentChild(AccordionTitle) customTitle: AccordionTitle;
-  @ContentChild(AccordionHeader) customHeader: AccordionHeader;
+  @ContentChild(AccordionContent) content!: AccordionContent;
+  @ContentChild(AccordionTitle) customTitle!: AccordionTitle;
+  @ContentChild(AccordionHeader) customHeader!: AccordionHeader;
 }
